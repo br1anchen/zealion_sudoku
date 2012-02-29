@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Lock</key>
+		<false/>
+		<key>Name</key>
+		<string>Art Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>City Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Food &amp; Drink Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Mountain Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Sports Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Cat Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Bird Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Dog Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Graphics Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Nature Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>Lock</key>
+		<true/>
+		<key>Name</key>
+		<string>Space Pack</string>
+		<key>Problem</key>
+		<integer>25</integer>
+		<key>Solve</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>

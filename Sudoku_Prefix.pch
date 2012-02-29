@@ -1,0 +1,24 @@
+//
+// Prefix header for all source files of the 'Sudoku' target in the 'Sudoku' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+#ifdef SHOrientationLandScape
+#define SCREEN_WIDTH			[[UIScreen mainScreen] bounds].size.height
+#define SCREEN_HEIGHT			([[UIScreen mainScreen] bounds].size.width)
+#define SCALE_SCREEN_WIDTH		(SCREEN_WIDTH / 1024)
+#define SCALE_SCREEN_HEIGHT		(SCREEN_HEIGHT / 768)
+#else
+#define SCREEN_WIDTH			[[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT			([[UIScreen mainScreen] bounds].size.height)
+#define SCALE_SCREEN_WIDTH		(SCREEN_WIDTH / 768)
+#define SCALE_SCREEN_HEIGHT		(SCREEN_HEIGHT / 1024)
+#endif
+
+#define URL_MOREAPP		@"http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=302820334&mt=8"
+#define SHImageString(str, ext)	({ UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?	([NSString stringWithFormat:@"%@.%@", (str), (ext)]) : ([NSString stringWithFormat:@"%@@3x.%@", (str), (ext)]); })
+#define SHLargeImageString(str, ext)	({ UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?	([NSString stringWithFormat:@"%@@2x.%@", (str), (ext)]) : ([NSString stringWithFormat:@"%@@3x.%@", (str), (ext)]); })
