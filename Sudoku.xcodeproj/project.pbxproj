@@ -493,6 +493,8 @@
 		2899E5220DE3E06400AC0155 /* SudokuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* SudokuViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPhone.xib */; };
 		28D7ACF80DDB3853001CB0EB /* SudokuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SudokuViewController.m */; };
+		674C1C3914FE3E870075D2AC /* Choose_Pcp_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C1C3814FE3E870075D2AC /* Choose_Pcp_back.png */; };
+		674C1C3C14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C1C3B14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png */; };
 		6792323814F4EAB4001ADED2 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6792323614F4EAB4001ADED2 /* h2.png */; };
 		6792323914F4EAB4001ADED2 /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6792323714F4EAB4001ADED2 /* h1.png */; };
 /* End PBXBuildFile section */
@@ -1005,6 +1007,8 @@
 		28D7ACF70DDB3853001CB0EB /* SudokuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Sudoku_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sudoku_Prefix.pch; sourceTree = "<group>"; };
+		674C1C3814FE3E870075D2AC /* Choose_Pcp_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Choose_Pcp_back.png; sourceTree = "<group>"; };
+		674C1C3B14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Choose_Pcp_back@2x.png"; sourceTree = "<group>"; };
 		6792323614F4EAB4001ADED2 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = h2.png; path = ../../../../Desktop/h2.png; sourceTree = "<group>"; };
 		6792323714F4EAB4001ADED2 /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = h1.png; path = ../../../../Desktop/h1.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Sudoku-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sudoku-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -1510,6 +1514,8 @@
 				18EFDC93148395C3008DA514 /* Choose_pic_nor@2x.png */,
 				18EFDC94148395C3008DA514 /* Choose_pic_sel.png */,
 				18EFDC95148395C3008DA514 /* Choose_pic_sel@2x.png */,
+				674C1C3B14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png */,
+				674C1C3814FE3E870075D2AC /* Choose_Pcp_back.png */,
 				18EFDC96148395C3008DA514 /* Choose_yp_back.png */,
 				18EFDC97148395C3008DA514 /* Choose_yp_back@2x.png */,
 				18EFDC98148395C3008DA514 /* classic_sud_nor.png */,
@@ -2247,6 +2253,8 @@
 				1807F42314AB5FD300986B01 /* mountain25.jpg in Resources */,
 				6792323814F4EAB4001ADED2 /* h2.png in Resources */,
 				6792323914F4EAB4001ADED2 /* h1.png in Resources */,
+				674C1C3914FE3E870075D2AC /* Choose_Pcp_back.png in Resources */,
+				674C1C3C14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
