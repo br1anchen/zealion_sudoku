@@ -69,4 +69,16 @@
     [m_scrollView addSubview:m_viewText];
     [m_scrollView setContentSize:m_viewText.bounds.size];
 }
+
+- (IBAction)addressClick:(UIButton *)sender
+{
+    if(sender.tag==0)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:info@youarebacon.com"]];
+    }
+    else if(sender.tag==1)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://YouAreBacon.com"]];
+    }
+}
 @end

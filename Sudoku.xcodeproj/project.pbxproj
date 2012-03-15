@@ -372,7 +372,6 @@
 		18EFDDC1148395C4008DA514 /* how_Pre.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCCB148395C3008DA514 /* how_Pre.png */; };
 		18EFDDC2148395C4008DA514 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCCC148395C3008DA514 /* key.png */; };
 		18EFDDC3148395C4008DA514 /* key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCCD148395C3008DA514 /* key@2x.png */; };
-		18EFDDC4148395C4008DA514 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCCE148395C3008DA514 /* logo.png */; };
 		18EFDDC7148395C4008DA514 /* medium_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCD1148395C3008DA514 /* medium_nor.png */; };
 		18EFDDC8148395C4008DA514 /* medium_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCD2148395C3008DA514 /* medium_nor@2x.png */; };
 		18EFDDC9148395C4008DA514 /* medium_pre.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EFDCD3148395C3008DA514 /* medium_pre.png */; };
@@ -497,6 +496,7 @@
 		674C1C3C14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C1C3B14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png */; };
 		67FFCC121509FA7A00C6F9F0 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FFCC101509FA7A00C6F9F0 /* h2.png */; };
 		67FFCC131509FA7A00C6F9F0 /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FFCC111509FA7A00C6F9F0 /* h1.png */; };
+		D67D6ED81512313100B997BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D67D6ED71512313100B997BA /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -881,7 +881,6 @@
 		18EFDCCB148395C3008DA514 /* how_Pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = how_Pre.png; sourceTree = "<group>"; };
 		18EFDCCC148395C3008DA514 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		18EFDCCD148395C3008DA514 /* key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@2x.png"; sourceTree = "<group>"; };
-		18EFDCCE148395C3008DA514 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		18EFDCD1148395C3008DA514 /* medium_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium_nor.png; sourceTree = "<group>"; };
 		18EFDCD2148395C3008DA514 /* medium_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medium_nor@2x.png"; sourceTree = "<group>"; };
 		18EFDCD3148395C3008DA514 /* medium_pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium_pre.png; sourceTree = "<group>"; };
@@ -1012,6 +1011,7 @@
 		67FFCC101509FA7A00C6F9F0 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
 		67FFCC111509FA7A00C6F9F0 /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Sudoku-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sudoku-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D67D6ED71512313100B997BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../Desktop/logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1487,6 +1487,7 @@
 		18EFDC5E148395C3008DA514 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				D67D6ED71512313100B997BA /* logo.png */,
 				18EFDC5F148395C3008DA514 /* bay_pre.png */,
 				18EFDC61148395C3008DA514 /* buy_back@2x.png */,
 				18EFDC62148395C3008DA514 /* buy_nor.png */,
@@ -1556,7 +1557,6 @@
 				18EFDCCD148395C3008DA514 /* key@2x.png */,
 				67FFCC101509FA7A00C6F9F0 /* h2.png */,
 				67FFCC111509FA7A00C6F9F0 /* h1.png */,
-				18EFDCCE148395C3008DA514 /* logo.png */,
 				18EFDCD1148395C3008DA514 /* medium_nor.png */,
 				18EFDCD2148395C3008DA514 /* medium_nor@2x.png */,
 				18EFDCD3148395C3008DA514 /* medium_pre.png */,
@@ -2012,7 +2012,6 @@
 				18EFDDC1148395C4008DA514 /* how_Pre.png in Resources */,
 				18EFDDC2148395C4008DA514 /* key.png in Resources */,
 				18EFDDC3148395C4008DA514 /* key@2x.png in Resources */,
-				18EFDDC4148395C4008DA514 /* logo.png in Resources */,
 				18EFDDC7148395C4008DA514 /* medium_nor.png in Resources */,
 				18EFDDC8148395C4008DA514 /* medium_nor@2x.png in Resources */,
 				18EFDDC9148395C4008DA514 /* medium_pre.png in Resources */,
@@ -2255,6 +2254,7 @@
 				674C1C3C14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png in Resources */,
 				67FFCC121509FA7A00C6F9F0 /* h2.png in Resources */,
 				67FFCC131509FA7A00C6F9F0 /* h1.png in Resources */,
+				D67D6ED81512313100B997BA /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2295,7 +2295,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lingfei Song (3JW9D7P2Q2)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen Kai (TAW2G3F55X)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2308,7 +2309,7 @@
 				INFOPLIST_FILE = "Sudoku-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Sudoku;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F502E093-6490-4C52-92BD-C60507F61449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DA704A33-DC77-40E1-B1C7-B0678E8328FB";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2317,7 +2318,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lingfei Song (3JW9D7P2Q2)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chen Kai (TAW2G3F55X)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2328,7 +2330,7 @@
 				INFOPLIST_FILE = "Sudoku-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Sudoku;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F502E093-6490-4C52-92BD-C60507F61449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DA704A33-DC77-40E1-B1C7-B0678E8328FB";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

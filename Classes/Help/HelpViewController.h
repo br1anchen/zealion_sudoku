@@ -14,4 +14,6 @@
 }
 
 - (void) setTextView;
+- (IBAction)addressClick:(UIButton*)sender;
+
 @end

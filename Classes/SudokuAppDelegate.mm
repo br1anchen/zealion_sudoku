@@ -41,6 +41,13 @@
     [self.window makeKeyAndVisible];
 	
 	[self buyPackPictureState];
+    
+    
+    // initialize and setup audio session
+    // set audio session to AMBIENT
+	// and background music will continue to play:    
+	AudioSessionInitialize (NULL, NULL, nil, nil);
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];
 
     return YES;
 }
