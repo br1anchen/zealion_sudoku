@@ -496,7 +496,7 @@
 		674C1C3C14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C1C3B14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png */; };
 		67FFCC121509FA7A00C6F9F0 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FFCC101509FA7A00C6F9F0 /* h2.png */; };
 		67FFCC131509FA7A00C6F9F0 /* h1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FFCC111509FA7A00C6F9F0 /* h1.png */; };
-		D67D6ED81512313100B997BA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D67D6ED71512313100B997BA /* logo.png */; };
+		D6EAA4D7151245BA00B0F8B7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D6EAA4D6151245BA00B0F8B7 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1011,7 +1011,7 @@
 		67FFCC101509FA7A00C6F9F0 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
 		67FFCC111509FA7A00C6F9F0 /* h1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h1.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Sudoku-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sudoku-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		D67D6ED71512313100B997BA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../Desktop/logo.png; sourceTree = "<group>"; };
+		D6EAA4D6151245BA00B0F8B7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1487,7 +1487,7 @@
 		18EFDC5E148395C3008DA514 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				D67D6ED71512313100B997BA /* logo.png */,
+				D6EAA4D6151245BA00B0F8B7 /* logo.png */,
 				18EFDC5F148395C3008DA514 /* bay_pre.png */,
 				18EFDC61148395C3008DA514 /* buy_back@2x.png */,
 				18EFDC62148395C3008DA514 /* buy_nor.png */,
@@ -2254,7 +2254,7 @@
 				674C1C3C14FE3EAD0075D2AC /* Choose_Pcp_back@2x.png in Resources */,
 				67FFCC121509FA7A00C6F9F0 /* h2.png in Resources */,
 				67FFCC131509FA7A00C6F9F0 /* h1.png in Resources */,
-				D67D6ED81512313100B997BA /* logo.png in Resources */,
+				D6EAA4D7151245BA00B0F8B7 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
