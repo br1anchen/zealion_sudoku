@@ -555,8 +555,7 @@ GameOptionInfo* g_GameOptionInfo;
 	NSMutableDictionary* item = (NSMutableDictionary*)[m_arrayPuzzlePackInfo objectAtIndex:pack];
 	int nCount = [self getSolvedPuzzlePackProblemCount:pack];
 	[item setValue:[NSNumber numberWithInt:nCount] forKey:@"Solve"];
-	int nMax = [[item objectForKey:@"Problem"] intValue];
-	if (nCount >= nMax && pack < m_nEnablePackCount-1) {
+	if (nCount >= 20 && pack < m_nEnablePackCount-1) {
 		item = (NSMutableDictionary*)[m_arrayPuzzlePackInfo objectAtIndex:pack+1];
 		[item setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
 	}

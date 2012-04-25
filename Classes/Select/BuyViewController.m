@@ -221,9 +221,10 @@
         
     [cell.contentView addSubview:[self getButton:kTagKeyButton+indexPath.row]];
 	
-	NSString* strImg = [NSString stringWithFormat:@"Choose_pic%02d", index];
-    UIImage* img = [[UIImage imageNamed:SHImageString(strImg, @"png")] retain];
-    [[cell imageView] setImage:[self getPackImage:index]];
+	NSString* strImg = [NSString stringWithFormat:@"thumb_%02d", index];
+    UIImage* img = [[UIImage imageNamed:strImg] retain];
+    //[[cell imageView] setImage:[self getPackImage:index]];
+    [[cell imageView] setImage:[ImageManipulator makeRoundCornerImage:img :40 :40]];
 	[img release];
     
     return cell;

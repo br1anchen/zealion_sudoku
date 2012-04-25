@@ -11,6 +11,7 @@
 
 @interface StageViewController : UIViewController {
 	BOOL m_bHideNavBar;
+    IBOutlet UIActivityIndicatorView *indicator;
 }
 
 -(void) createStageButtons;

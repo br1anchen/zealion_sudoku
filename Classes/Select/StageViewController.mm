@@ -164,6 +164,12 @@
 		[button release];
 	}
 	[imgBtn release];
+    
+    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [indicator setHidesWhenStopped:YES];[indicator setFrame:CGRectMake(0, 0, 0, 0)];
+    [self.view addSubview:indicator];
+    
+    //[indicator release];
 //	[imgPack release];
 //	[imgPackView release];
 //	[imgKeyView release];
@@ -177,8 +183,10 @@
 //	UIButton* btn = [[
 	return nil;
 }
--(void) onStage:(id)sender {
-	UIButton* btn = (UIButton*)sender;
+
+-(void) doloading:(id)sender
+{
+    UIButton* btn = (UIButton*)sender;
 	int tag = btn.tag;
 	int nProblemState;
 	if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
@@ -186,7 +194,11 @@
 	else
 		nProblemState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:tag];
 	if (nProblemState == PROBLEM_LOCK)
-		return;
+    {
+        [indicator stopAnimating];
+        return;
+    }
+		
 	
 	
 	self.title = @"Back";
@@ -202,6 +214,15 @@
 	
 	[self.navigationController pushViewController:controller animated:YES];
 	[controller release];
+    
+    [indicator stopAnimating];
+}
+
+-(void) onStage:(id)sender {
+    UIButton *btn = (UIButton*)sender;
+    [indicator setFrame:btn.frame];
+    [indicator startAnimating];
+    [self performSelector:@selector(doloading:) withObject:sender afterDelay:0];
 	
 }
 
