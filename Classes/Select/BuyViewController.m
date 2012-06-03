@@ -127,7 +127,7 @@
 -(void) buttonAction:(id)sender {
     UIButton* btn = (UIButton*)sender;
     int tag = btn.tag-kTagKeyButton;
-    int index = [g_GameOptionInfo getBuyPackIndex:tag];
+    int index = [g_GameOptionInfo getBuyPackIndex:tag] -4;
     if ([MKStoreManager featurePurchased:index] == FALSE) {
         [[MKStoreManager sharedManager] buyFeatureWithIndex:index];
     }

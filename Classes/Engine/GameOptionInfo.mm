@@ -45,9 +45,9 @@ GameOptionInfo* g_GameOptionInfo;
 }
 -(void) setBuyPicState:(int)index buy:(BOOL)bBuy {
 	m_bBuyedPackPitureState[index] = bBuy;
-//	if (bBuy) {
-//        m_nEnablePackCount ++;
-//    }
+    if (bBuy) {
+        m_nEnablePackCount ++;
+    }
 }
 -(BOOL) getBuyPicState:(int)index {
     return m_bBuyedPackPitureState[index];

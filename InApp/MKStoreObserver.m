@@ -41,6 +41,7 @@
 
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
 {	
+    NSLog(transaction.error.localizedDescription);
     if (transaction.error.code != SKErrorPaymentCancelled){	
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The upgrade procedure failed" message:@"Please check your Internet connection and your App Store account information." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];

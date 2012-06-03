@@ -19,7 +19,7 @@
 		<string>114.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.baconware.picturesudoku.1</string>
+	<string>com.baconware.picturesudoku</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

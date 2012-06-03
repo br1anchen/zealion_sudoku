@@ -20,13 +20,13 @@
 //static NSString *featureHId = @"space";
 //static NSString *featureIId = @"art";
 
-static NSString *featureAId = @"sports";
-static NSString *featureBId = @"cat";
-static NSString *featureCId = @"bird";
-static NSString *featureDId = @"dog";
-static NSString *featureEId = @"graphics";
-static NSString *featureFId = @"nature";
-static NSString *featureGId = @"space";
+static NSString *featureAId = @"SportsPack";
+static NSString *featureBId = @"CatPack";
+static NSString *featureCId = @"BirdPack";
+static NSString *featureDId = @"DogPack";
+static NSString *featureEId = @"GraphicsPack";
+static NSString *featureFId = @"NaturePack";
+static NSString *featureGId = @"SpacePack";
 static NSString *featureHId = @"";
 static NSString *featureIId = @"";
 
