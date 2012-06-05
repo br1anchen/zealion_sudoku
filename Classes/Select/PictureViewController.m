@@ -163,16 +163,16 @@
 	else
 		data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
 #ifndef FULL_TEST
-	if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
+	//if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
 #endif
-	{
+	//{
 		self.title = @"Back";
 		m_bHideNavBar = NO;
 		g_GameOptionInfo.m_nSelectedPack = indexPath.row;
 		StageViewController* controller = [[StageViewController alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];	
-	}
+	//}
 }
 
 #pragma mark -
@@ -281,9 +281,12 @@
         [imgView release];
 	}		
 	
-	NSString* strImg = [NSString stringWithFormat:@"Choose_pic%02d", index];
-    img = [[UIImage imageNamed:SHImageString(strImg, @"png")] retain];
-    [[cell imageView] setImage:[self getPackImage:index]];
+	//NSString* strImg = [NSString stringWithFormat:@"Choose_pic%02d", index];
+    NSString* strImg = [NSString stringWithFormat:@"thumb_%02d", index];
+    //img = [[UIImage imageNamed:SHImageString(strImg, @"png")] retain];
+    img = [[UIImage imageNamed:strImg] retain];
+    //[[cell imageView] setImage:[self getPackImage:index]];
+    [[cell imageView] setImage:[ImageManipulator makeRoundCornerImage:img :40 :40]];
 	[img release];
     
     return cell;

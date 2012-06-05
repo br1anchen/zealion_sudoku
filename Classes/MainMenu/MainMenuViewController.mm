@@ -178,9 +178,9 @@
 }
 #define SERVER_URL  @"http://youarebacon.com/filebase"
 -(void) downloadPack {
-    NSString* strFileName;
-    NSString* strUrl;
-    NSString* strPath;
+    //NSString* strFileName;
+    //NSString* strUrl;
+    //NSString* strPath;
     int pack;
 //    UIImage* image;
     BOOL bSuccess = NO;
@@ -190,21 +190,21 @@
         if ([g_GameOptionInfo getDownloadPackState:i] == NO) {
             bSuccess = YES;
             pack = DEFAULT_PICCOUNT+i;
-            for (int j = 0; j < MAX_STAGE; j ++) {
-                strFileName = [NSString stringWithFormat:@"%@%02d.jpg", [g_GameOptionInfo getPackName:pack], j+1];
-                strUrl = [NSString stringWithFormat:@"%@/%@/%@", SERVER_URL, [g_GameOptionInfo getDirPackName:pack], strFileName];
-                NSLog(@"%@", strUrl);
-                NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:strUrl]];
-                strPath = [g_GameOptionInfo getFilePathWithFileName:strFileName];
-                [g_GameOptionInfo deleteFile:strPath];
-                BOOL bRet = [data writeToFile:strPath atomically:YES];
-                if (bRet == NO) {
-                    bSuccess = NO;
-                    break;
-                }
-//                image = [UIImage imageWithData:data];
-//                [image 
-            }
+//            for (int j = 0; j < MAX_STAGE; j ++) {
+//                strFileName = [NSString stringWithFormat:@"%@%02d.jpg", [g_GameOptionInfo getPackName:pack], j+1];
+//                strUrl = [NSString stringWithFormat:@"%@/%@/%@", SERVER_URL, [g_GameOptionInfo getDirPackName:pack], strFileName];
+//                NSLog(@"%@", strUrl);
+//                NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:strUrl]];
+//                strPath = [g_GameOptionInfo getFilePathWithFileName:strFileName];
+//                [g_GameOptionInfo deleteFile:strPath];
+//                BOOL bRet = [data writeToFile:strPath atomically:YES];
+//                if (bRet == NO) {
+//                    bSuccess = NO;
+//                    break;
+//                }
+////                image = [UIImage imageWithData:data];
+////                [image 
+//            }
             if (bSuccess)
                 [g_GameOptionInfo setDownloadPackState:i download:YES];
         }
