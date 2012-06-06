@@ -163,16 +163,16 @@
 	else
 		data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
 #ifndef FULL_TEST
-	if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
+	//if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
 #endif
-	{
+	//{
 		self.title = @"Back";
 		m_bHideNavBar = NO;
 		g_GameOptionInfo.m_nSelectedPack = indexPath.row;
 		StageViewController* controller = [[StageViewController alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];	
-	}
+	//}
 }
 
 #pragma mark -
@@ -244,11 +244,44 @@
     
     NSUInteger index = [indexPath row];
 	NSDictionary* data;
-	if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
-		data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
-	else
-		data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
     
+    if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
+        if(index < 4){
+            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
+        }else{
+            int ctBuyed = 0;
+            for(int i =0;i<7;i ++){
+                if ([g_GameOptionInfo getBuyPicState:i]){
+                    ctBuyed ++;
+                    if(ctBuyed == index - 3){
+                        data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:i+4];
+                        index = i+4;
+                        break;
+                    }
+                }
+                else
+                    continue;
+            }
+        }
+    }else{
+        if(index < 4){
+            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
+        }else{
+            int ctBuyed = 0;
+            for(int i =0;i<7;i ++){
+                if ([g_GameOptionInfo getBuyPicState:i]){
+                    ctBuyed ++;
+                    if(ctBuyed == index - 3){
+                        data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:i+4];
+                        index = i+4;
+                        break;
+                    }
+                }
+                else
+                    continue;
+            }
+        }
+    }    
 	NSString* strName = (NSString*)[data objectForKey:@"Name"];
     [[cell textLabel] setText:strName];
     

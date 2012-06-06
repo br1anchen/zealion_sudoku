@@ -55,10 +55,10 @@ GameOptionInfo* g_GameOptionInfo;
 -(void) initEnablePackCount {
     m_nEnablePackCount = DEFAULT_PICCOUNT;
     for (int i = 0; i < BUY_PICCOUNT; i ++) {
-        if (m_bBuyedPackPitureState[i] && m_bDownloadPackState[i])
+        if (m_bBuyedPackPitureState[i] || m_bDownloadPackState[i])
             m_nEnablePackCount ++;
         else
-            break;
+            continue;
     }
 }
 -(int) getPackPicIndex:(int)number {
