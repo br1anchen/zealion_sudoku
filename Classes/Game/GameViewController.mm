@@ -1980,13 +1980,25 @@ static int s_nTestTitleTag = -1;
             return;
         }
         int nProblemState;
-        if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
-            nProblemState = [g_GameOptionInfo getPuzzlePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:nStage];
-        else
-            nProblemState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:nStage];
-        if (nProblemState == PROBLEM_LOCK) {
-            [self.navigationController popViewControllerAnimated:TRUE];
-            return;
+        if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
+            if(g_GameOptionInfo.m_nSelectedPack < 4){
+                nProblemState = [g_GameOptionInfo getPuzzlePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:nStage];
+            }else
+            {
+                nProblemState = [g_GameOptionInfo getPuzzlePackProblemState:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack] stage:nStage];
+            }
+        }else
+        {    
+            if(g_GameOptionInfo.m_nSelectedPack < 4){
+                nProblemState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:nStage];
+            }else
+            {
+                nProblemState = [g_GameOptionInfo getPicturePackProblemState:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack] stage:nStage];
+            }
+            if (nProblemState == PROBLEM_LOCK) {
+                [self.navigationController popViewControllerAnimated:TRUE];
+                return;
+            }
         }
     }
 	g_GameOptionInfo.m_nSelectedStage = nStage;

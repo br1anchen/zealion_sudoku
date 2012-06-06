@@ -7,6 +7,7 @@
 
 #import "MKStoreObserver.h"
 #import "MKStoreManager.h"
+#import "MainMenuViewController.h"
 
 @implementation MKStoreObserver
 
@@ -41,7 +42,6 @@
 
 - (void) failedTransaction: (SKPaymentTransaction *)transaction
 {	
-    NSLog(transaction.error.localizedDescription);
     if (transaction.error.code != SKErrorPaymentCancelled){	
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"The upgrade procedure failed" message:@"Please check your Internet connection and your App Store account information." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];
@@ -54,6 +54,9 @@
 - (void) completeTransaction: (SKPaymentTransaction *)transaction
 {		
     [[MKStoreManager sharedManager] provideContent: transaction.payment.productIdentifier];	
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Purchase success" message:@"Thanks for your interest on Sudoku." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [alert release];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];	
 }
 

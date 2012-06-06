@@ -1,7 +1,7 @@
 
 
 #import "MKStoreManager.h"
-
+#import "GameOptionInfo.h"
 
 @implementation MKStoreManager
 
@@ -209,26 +209,42 @@ static MKStoreManager* _sharedStoreManager; // self
 
 -(void) provideContent: (NSString*) productIdentifier
 {
-	if([productIdentifier isEqualToString:featureAId])
+	if([productIdentifier isEqualToString:featureAId]){
 		featureAPurchased = YES;
-
-	if([productIdentifier isEqualToString:featureBId])
+        [g_GameOptionInfo setBuyPicState:0 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureBId]){
 		featureBPurchased = YES;
-
-	if([productIdentifier isEqualToString:featureCId])
+        [g_GameOptionInfo setBuyPicState:1 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureCId]){
 		featureCPurchased = YES;
-	if([productIdentifier isEqualToString:featureDId])
+        [g_GameOptionInfo setBuyPicState:2 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureDId]){
 		featureDPurchased = YES;
-	if([productIdentifier isEqualToString:featureEId])
+        [g_GameOptionInfo setBuyPicState:3 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureEId]){
 		featureEPurchased = YES;
-	if([productIdentifier isEqualToString:featureFId])
+        [g_GameOptionInfo setBuyPicState:4 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureFId]){
 		featureFPurchased = YES;
-	if([productIdentifier isEqualToString:featureGId])
+        [g_GameOptionInfo setBuyPicState:5 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureGId]){
 		featureGPurchased = YES;
-	if([productIdentifier isEqualToString:featureHId])
+        [g_GameOptionInfo setBuyPicState:6 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureHId]){
 		featureHPurchased = YES;
-	if([productIdentifier isEqualToString:featureIId])
+        [g_GameOptionInfo setBuyPicState:7 buy:YES];
+    }
+	if([productIdentifier isEqualToString:featureIId]){
 		featureIPurchased = YES;
+        [g_GameOptionInfo setBuyPicState:8 buy:YES];
+    }
 	
 	[MKStoreManager updatePurchases];
 }

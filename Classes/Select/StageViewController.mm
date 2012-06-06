@@ -126,11 +126,19 @@
 		button.backgroundColor = [UIColor clearColor];
 		[button setBackgroundImage:imgBtn forState:UIControlStateNormal];
 		int btnState;
-		if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
-			btnState = [g_GameOptionInfo getPuzzlePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:i];
-		else
-			btnState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:i];
-
+		if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
+			if(g_GameOptionInfo.m_nSelectedPack < 4){
+                btnState = [g_GameOptionInfo getPuzzlePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:i];
+            }else{
+                btnState = [g_GameOptionInfo getPuzzlePackProblemState:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack] stage:i];
+            }
+        }else{
+            if(g_GameOptionInfo.m_nSelectedPack < 4){
+                btnState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:i];
+            }else{
+                btnState = [g_GameOptionInfo getPicturePackProblemState:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack] stage:i];
+            }
+        }
 		switch (btnState) {
 			case PROBLEM_LOCK:
 			{
@@ -189,11 +197,20 @@
     UIButton* btn = (UIButton*)sender;
 	int tag = btn.tag;
 	int nProblemState;
-	if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
-		nProblemState = [g_GameOptionInfo getPuzzlePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:tag];
-	else
-		nProblemState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:tag];
-	if (nProblemState == PROBLEM_LOCK)
+	if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
+		if(g_GameOptionInfo.m_nSelectedPack < 4){
+            nProblemState = [g_GameOptionInfo getPuzzlePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:tag];
+        }else{
+            nProblemState = [g_GameOptionInfo getPuzzlePackProblemState:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack] stage:tag];
+        }
+	}else{
+        if(g_GameOptionInfo.m_nSelectedPack < 4){
+            nProblemState = [g_GameOptionInfo getPicturePackProblemState:g_GameOptionInfo.m_nSelectedPack stage:tag];
+        }else{
+            nProblemState = [g_GameOptionInfo getPicturePackProblemState:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack] stage:tag];
+        }
+	}
+    if (nProblemState == PROBLEM_LOCK)
     {
         [indicator stopAnimating];
         return;
