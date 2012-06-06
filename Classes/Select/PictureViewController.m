@@ -249,37 +249,15 @@
         if(index < 4){
             data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
         }else{
-            int ctBuyed = 0;
-            for(int i =0;i<7;i ++){
-                if ([g_GameOptionInfo getBuyPicState:i]){
-                    ctBuyed ++;
-                    if(ctBuyed == index - 3){
-                        data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:i+4];
-                        index = i+4;
-                        break;
-                    }
-                }
-                else
-                    continue;
-            }
+            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
+            index = [g_GameOptionInfo getBuyPackIndexByListId:index];
         }
     }else{
         if(index < 4){
             data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
         }else{
-            int ctBuyed = 0;
-            for(int i =0;i<7;i ++){
-                if ([g_GameOptionInfo getBuyPicState:i]){
-                    ctBuyed ++;
-                    if(ctBuyed == index - 3){
-                        data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:i+4];
-                        index = i+4;
-                        break;
-                    }
-                }
-                else
-                    continue;
-            }
+            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
+            index = [g_GameOptionInfo getBuyPackIndexByListId:index];
         }
     }    
 	NSString* strName = (NSString*)[data objectForKey:@"Name"];

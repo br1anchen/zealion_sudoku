@@ -99,6 +99,23 @@ GameOptionInfo* g_GameOptionInfo;
     }
     return count;
 }
+
+- (int) getBuyPackIndexByListId:(int)listId
+{
+    int ctBuyed = 0;
+    for(int i =0;i< BUY_PICCOUNT;i ++){
+        if (m_bBuyedPackPitureState[i] == true){
+            ctBuyed ++;
+            if(ctBuyed == listId - 3){
+                return i+4;
+            }
+        }
+        else
+            continue;
+    }
+
+}
+
 -(void) loadData {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	BOOL bFirst = [defaults boolForKey:@"FirstStartApp"];

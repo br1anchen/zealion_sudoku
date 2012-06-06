@@ -163,6 +163,7 @@ enum BG_TYPE {
 -(int) getBuyPackIndex:(int)number;
 -(void) initEnablePackCount;
 -(int) getBuyPackCount;
+- (int) getBuyPackIndexByListId:(int)listId;
 
 //download
 -(void) setDownloadPackState:(int)index download:(BOOL)download;

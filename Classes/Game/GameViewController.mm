@@ -344,7 +344,7 @@
 	else {
 		//strPack = [NSString stringWithFormat:@"picpack%02d", g_GameOptionInfo.m_nSelectedPack];
 		//img = [[UIImage imageNamed:SHImageString(strPack, @"png")] retain];;
-        NSString* strImg = [NSString stringWithFormat:@"%@%02d.jpg", [g_GameOptionInfo getPackName:g_GameOptionInfo.m_nSelectedPack],stage+1];
+        NSString* strImg = [NSString stringWithFormat:@"%@%02d.jpg", [g_GameOptionInfo getPackName:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack]],stage+1];
         img = [[UIImage imageNamed:strImg] retain];
 
 	}
