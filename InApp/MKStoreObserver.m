@@ -62,7 +62,10 @@
 
 - (void) restoreTransaction: (SKPaymentTransaction *)transaction
 {	
-    [[MKStoreManager sharedManager] provideContent: transaction.originalTransaction.payment.productIdentifier];	
+    [[MKStoreManager sharedManager] provideContent: transaction.originalTransaction.payment.productIdentifier];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Restore success" message:[NSString stringWithFormat:@"Restore %@ success. Please go back to previous view to refresh packages.",transaction.originalTransaction.payment.productIdentifier] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [alert release];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];	
 }
 

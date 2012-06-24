@@ -192,6 +192,21 @@ static MKStoreManager* _sharedStoreManager; // self
 	}
 }
 
+- (void) restoreFeatures
+{
+    if ([SKPaymentQueue canMakePayments])
+	{
+		[[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+	}
+	else
+	{
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MyApp" message:@"You are not authorized to purchase from AppStore"
+													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];
+		[alert release];
+	}
+}
+
 - (void) buyFeatureB
 {
 	[self buyFeature:featureBId];

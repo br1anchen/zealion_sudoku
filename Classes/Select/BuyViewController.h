@@ -12,6 +12,7 @@
 @interface BuyViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
 	IBOutlet UITableView*	m_viewTable;
     NSMutableArray*     m_arrayButtons;
+    IBOutlet UIButton* m_btnRestore;
 }
 
 //-(void) initBuyPackState;
@@ -23,5 +24,6 @@
 
 -(CGFloat) getCellHeight;
 -(UIImage*) getPackImage:(int)pack;
+- (IBAction)restorePackage:(id)sender;
 
 @end

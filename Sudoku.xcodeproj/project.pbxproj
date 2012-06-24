@@ -492,6 +492,7 @@
 		2899E5220DE3E06400AC0155 /* SudokuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* SudokuViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPhone.xib */; };
 		28D7ACF80DDB3853001CB0EB /* SudokuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SudokuViewController.m */; };
+		293A63621596F38A00DDB29C /* restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 293A63611596F38A00DDB29C /* restore.png */; };
 		294C50A41578D3D600278B08 /* sports01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 294C508B1578D3D600278B08 /* sports01.jpg */; };
 		294C50A51578D3D600278B08 /* sports02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 294C508C1578D3D600278B08 /* sports02.jpg */; };
 		294C50A61578D3D600278B08 /* sports03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 294C508D1578D3D600278B08 /* sports03.jpg */; };
@@ -1190,6 +1191,7 @@
 		28AD733E0D9D9553002E5188 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* SudokuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* SudokuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuViewController.m; sourceTree = "<group>"; };
+		293A63611596F38A00DDB29C /* restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restore.png; sourceTree = "<group>"; };
 		294C508B1578D3D600278B08 /* sports01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sports01.jpg; path = Sports/sports01.jpg; sourceTree = "<group>"; };
 		294C508C1578D3D600278B08 /* sports02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sports02.jpg; path = Sports/sports02.jpg; sourceTree = "<group>"; };
 		294C508D1578D3D600278B08 /* sports03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sports03.jpg; path = Sports/sports03.jpg; sourceTree = "<group>"; };
@@ -1867,6 +1869,7 @@
 		18EFDC5E148395C3008DA514 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				293A63611596F38A00DDB29C /* restore.png */,
 				D6EAA4D6151245BA00B0F8B7 /* logo.png */,
 				18EFDC5F148395C3008DA514 /* bay_pre.png */,
 				18EFDC61148395C3008DA514 /* buy_back@2x.png */,
@@ -3063,6 +3066,7 @@
 				294C51EC1578D48700278B08 /* bird23.jpg in Resources */,
 				294C51ED1578D48700278B08 /* bird24.jpg in Resources */,
 				294C51EE1578D48700278B08 /* bird25.jpg in Resources */,
+				293A63621596F38A00DDB29C /* restore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3147,8 +3151,8 @@
 				INFOPLIST_FILE = "Sudoku-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "AFFEA469-9A8A-490F-9354-3CDBE1E3B55D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AFFEA469-9A8A-490F-9354-3CDBE1E3B55D";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

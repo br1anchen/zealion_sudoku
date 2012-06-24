@@ -22,7 +22,7 @@
 
 // do not call this directly. This is like a private method
 - (void) buyFeature:(NSString*) featureId;
-
+- (void) restoreFeatures;
 - (void) failedTransaction: (SKPaymentTransaction *)transaction;
 -(void) provideContent: (NSString*) productIdentifier;
 

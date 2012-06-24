@@ -247,4 +247,8 @@
 	return [img autorelease];
 }
 
+- (IBAction)restorePackage:(id)sender {
+    [[MKStoreManager sharedManager] restoreFeatures];
+}
+
 @end
