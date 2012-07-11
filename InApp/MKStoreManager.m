@@ -227,38 +227,74 @@ static MKStoreManager* _sharedStoreManager; // self
 	if([productIdentifier isEqualToString:featureAId]){
 		featureAPurchased = YES;
         [g_GameOptionInfo setBuyPicState:0 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:4];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:4];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureBId]){
 		featureBPurchased = YES;
         [g_GameOptionInfo setBuyPicState:1 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:5];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:5];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureCId]){
 		featureCPurchased = YES;
         [g_GameOptionInfo setBuyPicState:2 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:6];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:6];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureDId]){
 		featureDPurchased = YES;
         [g_GameOptionInfo setBuyPicState:3 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:7];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:7];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureEId]){
 		featureEPurchased = YES;
         [g_GameOptionInfo setBuyPicState:4 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:8];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:8];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureFId]){
 		featureFPurchased = YES;
         [g_GameOptionInfo setBuyPicState:5 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:9];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:9];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureGId]){
 		featureGPurchased = YES;
         [g_GameOptionInfo setBuyPicState:6 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:10];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:10];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureHId]){
 		featureHPurchased = YES;
         [g_GameOptionInfo setBuyPicState:7 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:11];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:11];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	if([productIdentifier isEqualToString:featureIId]){
 		featureIPurchased = YES;
         [g_GameOptionInfo setBuyPicState:8 buy:YES];
+        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:12];
+		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:12];
+		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	
 	[MKStoreManager updatePurchases];

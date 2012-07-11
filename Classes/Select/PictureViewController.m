@@ -158,18 +158,29 @@
 //    }
 //#endif
     
+	NSUInteger index = [indexPath row];
 	NSDictionary* data;
-	if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
-		data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
-	else
-		data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
+    
+    if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
+        if(index < 4){
+            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
+        }else{
+            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
+        }
+    }else{
+        if(index < 4){
+            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
+        }else{
+            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
+        }
+    }    
 #ifndef FULL_TEST
 	if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
 #endif
 	{
 		self.title = @"Back";
 		m_bHideNavBar = NO;
-		g_GameOptionInfo.m_nSelectedPack = indexPath.row;
+		g_GameOptionInfo.m_nSelectedPack = index;
 		StageViewController* controller = [[StageViewController alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];	
