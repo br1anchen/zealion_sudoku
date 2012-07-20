@@ -27,7 +27,7 @@ static NSString *featureDId = @"DogPack";
 static NSString *featureEId = @"GraphicsPack";
 static NSString *featureFId = @"NaturePack";
 static NSString *featureGId = @"SpacePack";
-static NSString *featureHId = @"";
+static NSString *featureHId = @"UnlockAllPacks";
 static NSString *featureIId = @"";
 
 BOOL featureAPurchased;
@@ -282,19 +282,17 @@ static MKStoreManager* _sharedStoreManager; // self
     }
 	if([productIdentifier isEqualToString:featureHId]){
 		featureHPurchased = YES;
-        [g_GameOptionInfo setBuyPicState:7 buy:YES];
-        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:11];
-		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
-        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:11];
-		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        for(int i = 0;i < 7;i++){
+            if([g_GameOptionInfo getBuyPicState:i]){continue;}
+            [g_GameOptionInfo setBuyPicState:i buy:YES];
+            NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:i + 4];
+            [itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+            NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:i + 4];
+            [itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        }
     }
 	if([productIdentifier isEqualToString:featureIId]){
 		featureIPurchased = YES;
-        [g_GameOptionInfo setBuyPicState:8 buy:YES];
-        NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:12];
-		[itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
-        NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:12];
-		[itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
     }
 	
 	[MKStoreManager updatePurchases];

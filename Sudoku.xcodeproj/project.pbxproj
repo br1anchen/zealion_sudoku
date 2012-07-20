@@ -493,6 +493,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPhone.xib */; };
 		28D7ACF80DDB3853001CB0EB /* SudokuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SudokuViewController.m */; };
 		293A63621596F38A00DDB29C /* restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 293A63611596F38A00DDB29C /* restore.png */; };
+		2943E2B815B949EC00449065 /* thumb_all.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2943E2B715B949EC00449065 /* thumb_all.jpg */; };
 		294C50A41578D3D600278B08 /* sports01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 294C508B1578D3D600278B08 /* sports01.jpg */; };
 		294C50A51578D3D600278B08 /* sports02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 294C508C1578D3D600278B08 /* sports02.jpg */; };
 		294C50A61578D3D600278B08 /* sports03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 294C508D1578D3D600278B08 /* sports03.jpg */; };
@@ -1192,6 +1193,7 @@
 		28D7ACF60DDB3853001CB0EB /* SudokuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* SudokuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuViewController.m; sourceTree = "<group>"; };
 		293A63611596F38A00DDB29C /* restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restore.png; sourceTree = "<group>"; };
+		2943E2B715B949EC00449065 /* thumb_all.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = thumb_all.jpg; path = Resource/Pack/thumb_all.jpg; sourceTree = "<group>"; };
 		294C508B1578D3D600278B08 /* sports01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sports01.jpg; path = Sports/sports01.jpg; sourceTree = "<group>"; };
 		294C508C1578D3D600278B08 /* sports02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sports02.jpg; path = Sports/sports02.jpg; sourceTree = "<group>"; };
 		294C508D1578D3D600278B08 /* sports03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sports03.jpg; path = Sports/sports03.jpg; sourceTree = "<group>"; };
@@ -2311,6 +2313,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2943E2B715B949EC00449065 /* thumb_all.jpg */,
 				18E1996314753E93008D82EC /* Default-Portrait.png */,
 				18E1996414753E93008D82EC /* Default.png */,
 				18E1996514753E93008D82EC /* Default@2x.png */,
@@ -3067,6 +3070,7 @@
 				294C51ED1578D48700278B08 /* bird24.jpg in Resources */,
 				294C51EE1578D48700278B08 /* bird25.jpg in Resources */,
 				293A63621596F38A00DDB29C /* restore.png in Resources */,
+				2943E2B815B949EC00449065 /* thumb_all.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3111,8 +3115,8 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骁 Chen (5DP72M79LD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 骁 Chen (5DP72M79LD)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3125,8 +3129,8 @@
 				INFOPLIST_FILE = "Sudoku-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "8DEA28F8-C74D-4027-B280-19F425A8762A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8DEA28F8-C74D-4027-B280-19F425A8762A";
+				PROVISIONING_PROFILE = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3139,8 +3143,8 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骁 Chen (5DP72M79LD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 骁 Chen (5DP72M79LD)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3151,8 +3155,8 @@
 				INFOPLIST_FILE = "Sudoku-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "AFFEA469-9A8A-490F-9354-3CDBE1E3B55D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AFFEA469-9A8A-490F-9354-3CDBE1E3B55D";
+				PROVISIONING_PROFILE = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3165,15 +3169,15 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骁 Chen (5DP72M79LD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 骁 Chen (5DP72M79LD)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "8EC93864-5D0E-41FD-92BB-93946AF030CA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8EC93864-5D0E-41FD-92BB-93946AF030CA";
+				PROVISIONING_PROFILE = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -3187,8 +3191,8 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骁 Chen (5DP72M79LD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 骁 Chen (5DP72M79LD)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3199,8 +3203,8 @@
 				INFOPLIST_FILE = "Sudoku-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "8EC93864-5D0E-41FD-92BB-93946AF030CA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8EC93864-5D0E-41FD-92BB-93946AF030CA";
+				PROVISIONING_PROFILE = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3213,14 +3217,14 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骁 Chen (5DP72M79LD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 骁 Chen (5DP72M79LD)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
-				PROVISIONING_PROFILE = "CA0DBA7C-AC32-4BC7-9EF4-73D16804AD43";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CA0DBA7C-AC32-4BC7-9EF4-73D16804AD43";
+				PROVISIONING_PROFILE = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3233,15 +3237,15 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 骁 Chen (5DP72M79LD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 骁 Chen (5DP72M79LD)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C9D1F-82AD-4798-8190-2BE6AF5F451C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

@@ -256,7 +256,6 @@
     
     NSUInteger index = [indexPath row];
 	NSDictionary* data;
-    
     if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
         if(index < 4){
             data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];

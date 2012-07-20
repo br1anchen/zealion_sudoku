@@ -128,8 +128,12 @@
     UIButton* btn = (UIButton*)sender;
     int tag = btn.tag-kTagKeyButton;
     int index = [g_GameOptionInfo getBuyPackIndex:tag] -4;
+    NSLog(@"%d",[g_GameOptionInfo getBuyPackCount]);
     if ([MKStoreManager featurePurchased:index] == FALSE) {
         [[MKStoreManager sharedManager] buyFeatureWithIndex:index];
+    }else if(tag == [g_GameOptionInfo getBuyPackCount])
+    {
+        [[MKStoreManager sharedManager] buyFeatureWithIndex:7];
     }
 }
 #pragma mark -
@@ -158,7 +162,7 @@
 //
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [g_GameOptionInfo getBuyPackCount];//g_GameOptionInfo.m_nEnablePackCount;
+    return [g_GameOptionInfo getBuyPackCount] + 1;//g_GameOptionInfo.m_nEnablePackCount;
 }
 
 // to determine specific row height for each cell, override this.
@@ -210,23 +214,35 @@
 	}
     
     NSUInteger index = [g_GameOptionInfo getBuyPackIndex:indexPath.row];
-	NSDictionary* data;
-	if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
-		data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:index];
-	else
-		data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:index];
-    
-	NSString* strName = (NSString*)[data objectForKey:@"Name"];
-    [[cell textLabel] setText:strName];
+    if(indexPath.row == [g_GameOptionInfo getBuyPackCount])
+    {
+        [[cell textLabel] setText:@"UnlockAllPacks"];
         
-    [cell.contentView addSubview:[self getButton:kTagKeyButton+indexPath.row]];
-	
-	NSString* strImg = [NSString stringWithFormat:@"thumb_%02d", index];
-    UIImage* img = [[UIImage imageNamed:strImg] retain];
-    //[[cell imageView] setImage:[self getPackImage:index]];
-    [[cell imageView] setImage:[ImageManipulator makeRoundCornerImage:img :40 :40]];
-	[img release];
+        [cell.contentView addSubview:[self getButton:kTagKeyButton+indexPath.row]];
+        
+        NSString* strImg = @"thumb_all.jpg";
+        UIImage* img = [[UIImage imageNamed:strImg] retain];
+        //[[cell imageView] setImage:[self getPackImage:index]];
+        [[cell imageView] setImage:[ImageManipulator makeRoundCornerImage:img :40 :40]];
+        [img release];
+    }else{
+        NSDictionary* data;
+        if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
+            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:index];
+        else
+            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:index];
     
+        NSString* strName = (NSString*)[data objectForKey:@"Name"];
+        [[cell textLabel] setText:strName];
+        
+        [cell.contentView addSubview:[self getButton:kTagKeyButton+indexPath.row]];
+	
+        NSString* strImg = [NSString stringWithFormat:@"thumb_%02d", index];
+        UIImage* img = [[UIImage imageNamed:strImg] retain];
+        //[[cell imageView] setImage:[self getPackImage:index]];
+        [[cell imageView] setImage:[ImageManipulator makeRoundCornerImage:img :40 :40]];
+        [img release];
+    }
     return cell;
 }
 

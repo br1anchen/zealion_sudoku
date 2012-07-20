@@ -54,7 +54,7 @@
 - (void) completeTransaction: (SKPaymentTransaction *)transaction
 {		
     [[MKStoreManager sharedManager] provideContent: transaction.payment.productIdentifier];	
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Purchase success" message:@"Thanks for your interest on Sudoku." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ purchase success",transaction.payment.productIdentifier] message:@"Thanks for your interest on Sudoku. Please go back to previous view to get your new packages." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
     [alert release];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];	
