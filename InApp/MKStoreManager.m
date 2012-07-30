@@ -282,13 +282,18 @@ static MKStoreManager* _sharedStoreManager; // self
     }
 	if([productIdentifier isEqualToString:featureHId]){
 		featureHPurchased = YES;
-        for(int i = 0;i < 7;i++){
-            if([g_GameOptionInfo getBuyPicState:i]){continue;}
-            [g_GameOptionInfo setBuyPicState:i buy:YES];
-            NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:i + 4];
-            [itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
-            NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:i + 4];
-            [itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+        for(int i =0;i<11;i++)
+        {
+            if(i<4){
+                NSMutableDictionary *itemPuzzle = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:i];
+                [itemPuzzle setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+                NSMutableDictionary *itemPicture = (NSMutableDictionary*)[g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:i];
+                [itemPicture setValue:[NSNumber numberWithBool:NO] forKey:@"Lock"];
+            }
+            [g_GameOptionInfo unlockAllPicturePackProblem:i];
+            [g_GameOptionInfo unlockAllPuzzlePackProblem:i];
+            [g_GameOptionInfo updatePicturePackInfo:i];
+            [g_GameOptionInfo updatePuzzlePackInfo:i];
         }
     }
 	if([productIdentifier isEqualToString:featureIId]){

@@ -159,32 +159,37 @@
 //#endif
     
 	NSUInteger index = [indexPath row];
-	NSDictionary* data;
-    
-    if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
-        if(index < 4){
-            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
-        }else{
-            data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
-        }
+    if(indexPath.row == g_GameOptionInfo.m_nEnablePackCount)
+    {
+        [[MKStoreManager sharedManager] buyFeatureWithIndex:7];
     }else{
-        if(index < 4){
-            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
+        NSDictionary* data;
+    
+        if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
+            if(index < 4){
+                data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:indexPath.row];
+            }else{
+                data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
+            }
         }else{
-            data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
-        }
-    }    
+            if(index < 4){
+                data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:indexPath.row];
+            }else{
+                data = [g_GameOptionInfo.m_arrayPicturePackInfo objectAtIndex:[g_GameOptionInfo getBuyPackIndexByListId:index]];
+            }
+        }    
 #ifndef FULL_TEST
-	if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
+        if ([[data objectForKey:@"Lock"] boolValue] == FALSE) 
 #endif
-	{
-		self.title = @"Back";
-		m_bHideNavBar = NO;
-		g_GameOptionInfo.m_nSelectedPack = index;
-		StageViewController* controller = [[StageViewController alloc] init];
-		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];	
-	}
+        {
+            self.title = @"Back";
+            m_bHideNavBar = NO;
+            g_GameOptionInfo.m_nSelectedPack = index;
+            StageViewController* controller = [[StageViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+            [controller release];	
+        }
+    }
 }
 
 #pragma mark -
@@ -203,7 +208,7 @@
 #ifdef FULL_TEST
     return PICTURE_COUNT;
 #else
-    return g_GameOptionInfo.m_nEnablePackCount;//g_GameOptionInfo.m_nEnablePackCount;
+    return g_GameOptionInfo.m_nEnablePackCount + 1;//g_GameOptionInfo.m_nEnablePackCount;
 #endif
 }
 
@@ -255,6 +260,18 @@
 	}
     
     NSUInteger index = [indexPath row];
+    if(indexPath.row == g_GameOptionInfo.m_nEnablePackCount)
+    {
+        [[cell textLabel] setText:@"UnlockAllPacks"];
+        
+        NSString* strImg = @"unlock.jpg";
+        UIImage* img = [[UIImage imageNamed:strImg] retain];
+        [[cell imageView] setImage:[ImageManipulator makeRoundCornerImage:img :40 :40]];
+        [img release];
+        NSString *detailText = @"To unlock all stages in your packs.";
+        [[cell detailTextLabel] setText:detailText];
+        return cell;
+    }
 	NSDictionary* data;
     if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE){
         if(index < 4){

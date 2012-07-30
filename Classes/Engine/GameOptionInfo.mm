@@ -568,6 +568,16 @@ GameOptionInfo* g_GameOptionInfo;
 		}
 	}
 }
+
+-(void) unlockAllPuzzlePackProblem:(int)pack
+{
+    for (int i = 0; i < MAX_STAGE; i ++) {
+		if (m_nPuzzlePackProblemState[pack][i] == PROBLEM_LOCK) {
+			m_nPuzzlePackProblemState[pack][i] = PROBLEM_UNLOCK;
+		}
+	}
+}
+
 -(void) updatePuzzlePackInfo:(int)pack {
 	NSMutableDictionary* item = (NSMutableDictionary*)[m_arrayPuzzlePackInfo objectAtIndex:pack];
 	int nCount = [self getSolvedPuzzlePackProblemCount:pack];
@@ -600,6 +610,16 @@ GameOptionInfo* g_GameOptionInfo;
 		}
 	}
 }
+
+-(void) unlockAllPicturePackProblem:(int)pack
+{
+    for (int i = 0; i < MAX_STAGE; i ++) {
+		if (m_nPicturePackProblemState[pack][i] == PROBLEM_LOCK) {
+			m_nPicturePackProblemState[pack][i] = PROBLEM_UNLOCK;
+		}
+	}
+}
+
 -(void) updatePicturePackInfo:(int)pack {
 	NSMutableDictionary* item = (NSMutableDictionary*)[m_arrayPicturePackInfo objectAtIndex:pack];
 	int nCount = [self getSolvedPicturePackProblemCount:pack];

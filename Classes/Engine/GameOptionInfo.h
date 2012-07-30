@@ -140,12 +140,14 @@ enum BG_TYPE {
 -(void) setPuzzlePackProblemState:(int)pack stage:(int)stage state:(int)state;
 -(int) getSolvedPuzzlePackProblemCount:(int)pack;
 -(void) unlockPuzzlePackProblem:(int)pack;
+-(void) unlockAllPuzzlePackProblem:(int)pack;
 -(void) updatePuzzlePackInfo:(int)pack;
 
 -(int) getPicturePackProblemState:(int)pack stage:(int)stage;
 -(void) setPicturePackProblemState:(int)pack stage:(int)stage state:(int)state;
 -(int) getSolvedPicturePackProblemCount:(int)pack;
 -(void) unlockPicturePackProblem:(int)pack;
+-(void) unlockAllPicturePackProblem:(int)pack;
 -(void) updatePicturePackInfo:(int)pack;
 
 -(int) getClassicCompletedCount:(int)nLevel;
