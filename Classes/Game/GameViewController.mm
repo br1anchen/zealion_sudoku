@@ -1852,8 +1852,12 @@ static int s_nTestTitleTag = -1;
 		nStage = 0;
 	}
 	else{
-		nPack = g_GameOptionInfo.m_nSelectedPack;
-		nStage = g_GameOptionInfo.m_nSelectedStage;
+        if(g_GameOptionInfo.m_nSelectedPack < 4){
+            nPack = g_GameOptionInfo.m_nSelectedPack;
+        }else{
+            nPack = [g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack];
+		}
+        nStage = g_GameOptionInfo.m_nSelectedStage;
 	}
 	[g_GameOptionInfo solveProblem:m_nGameType pack:nPack stage:nStage];
 

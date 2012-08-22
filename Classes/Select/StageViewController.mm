@@ -255,7 +255,8 @@
 	NSString* strPack;
 	if (g_GameOptionInfo.m_nSelectedPack < PICTURE_COUNT) {
 //        strPack = [NSString stringWithFormat:@"%@%02d.jpg", [g_GameOptionInfo getPackName:g_GameOptionInfo.m_nSelectedPack], stage+1];
-        strPack = [g_GameOptionInfo getPackImageFilePath:g_GameOptionInfo.m_nSelectedPack stage:stage];
+        if(g_GameOptionInfo.m_nSelectedPack <4){
+            strPack = [g_GameOptionInfo getPackImageFilePath:g_GameOptionInfo.m_nSelectedPack stage:stage];
 //		switch (g_GameOptionInfo.m_nSelectedPack) {
 //			case PICTURE_CITY:
 //				strPack = [NSString stringWithFormat:@"city%02d.png", stage+1];
@@ -271,6 +272,11 @@
 //		}
 //		imgPack = [[UIImage imageNamed:strPack] retain];
         imgPack = [[UIImage alloc] initWithContentsOfFile:strPack];
+        }else
+        {
+            NSString* strImg = [NSString stringWithFormat:@"%@%02d.jpg",[g_GameOptionInfo getPackName:[g_GameOptionInfo getBuyPackIndexByListId:g_GameOptionInfo.m_nSelectedPack]],stage+1];
+            imgPack = [UIImage imageNamed:strImg];
+        }
 		img = [ImageManipulator makeRoundCornerImage:imgPack :100 :100];
 		[imgPack release];
 	}
