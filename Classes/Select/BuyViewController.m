@@ -127,10 +127,10 @@
 -(void) buttonAction:(id)sender {
     UIButton* btn = (UIButton*)sender;
     int tag = btn.tag-kTagKeyButton;
-    int index = [g_GameOptionInfo getBuyPackIndex:tag] -4;
+    NSLog(@"tag:%d",tag);
     NSLog(@"%d",[g_GameOptionInfo getBuyPackCount]);
-    if ([MKStoreManager featurePurchased:index] == FALSE) {
-        [[MKStoreManager sharedManager] buyFeatureWithIndex:index];
+    if ([MKStoreManager featurePurchased:tag] == FALSE) {
+        [[MKStoreManager sharedManager] buyFeatureWithIndex:tag];
     }
 }
 #pragma mark -
@@ -159,7 +159,8 @@
 //
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [g_GameOptionInfo getBuyPackCount];//g_GameOptionInfo.m_nEnablePackCount;
+    //return [g_GameOptionInfo getBuyPackCount];//g_GameOptionInfo.m_nEnablePackCount;
+    return 7;
 }
 
 // to determine specific row height for each cell, override this.
@@ -210,7 +211,7 @@
 			[viewToRemove removeFromSuperview];
 	}
     
-    NSUInteger index = [g_GameOptionInfo getBuyPackIndex:indexPath.row];
+    NSUInteger index = indexPath.row + 4;
     NSDictionary* data;
     if (g_GameOptionInfo.m_nGameType == GAME_PUZZLE)
         data = [g_GameOptionInfo.m_arrayPuzzlePackInfo objectAtIndex:index];
@@ -219,9 +220,13 @@
     
     NSString* strName = (NSString*)[data objectForKey:@"Name"];
     [[cell textLabel] setText:strName];
-        
-    [cell.contentView addSubview:[self getButton:kTagKeyButton+indexPath.row]];
-	
+    if([g_GameOptionInfo getBuyPicState:indexPath.row] == NO){
+        [cell.contentView addSubview:[self getButton:kTagKeyButton+indexPath.row]];
+	}else
+    {
+        for(id i in cell.contentView.subviews){[i removeFromSuperview];}
+    }
+    
     NSString* strImg = [NSString stringWithFormat:@"thumb_%02d", index];
     UIImage* img = [[UIImage imageNamed:strImg] retain];
     //[[cell imageView] setImage:[self getPackImage:index]];
