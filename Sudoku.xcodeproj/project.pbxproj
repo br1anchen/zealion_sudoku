@@ -3118,6 +3118,7 @@
 				ARCHS = (
 					armv6,
 					armv7,
+					armv7s,
 				);
 				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
@@ -3131,11 +3132,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sudoku_Prefix.pch;
 				INFOPLIST_FILE = "Sudoku-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "D4656365-40BF-473D-B8E5-F1D04E98CE70";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D4656365-40BF-473D-B8E5-F1D04E98CE70";
+				PROVISIONING_PROFILE = "9974996D-B04F-46F9-BDD0-7BD424CF8EF4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9974996D-B04F-46F9-BDD0-7BD424CF8EF4";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s armv6";
 			};
 			name = Debug;
 		};
@@ -3146,6 +3148,7 @@
 				ARCHS = (
 					armv6,
 					armv7,
+					armv7s,
 				);
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
@@ -3157,12 +3160,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sudoku_Prefix.pch;
 				INFOPLIST_FILE = "Sudoku-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "A1CF99B0-3FD4-4B89-AB30-E0D02DF52EDB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A1CF99B0-3FD4-4B89-AB30-E0D02DF52EDB";
+				PROVISIONING_PROFILE = "205A36CA-9815-436E-A711-48FA7C57964E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "205A36CA-9815-436E-A711-48FA7C57964E";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s armv6";
 			};
 			name = Release;
 		};
@@ -3172,18 +3176,19 @@
 				ARCHS = (
 					armv6,
 					armv7,
+					armv7s,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "DDA83A9E-1618-417C-936F-620639EF5B6D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DDA83A9E-1618-417C-936F-620639EF5B6D";
+				PROVISIONING_PROFILE = "205A36CA-9815-436E-A711-48FA7C57964E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "armv7 armv7s armv6";
 			};
 			name = Adhoc;
 		};
@@ -3194,9 +3199,10 @@
 				ARCHS = (
 					armv6,
 					armv7,
+					armv7s,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3205,12 +3211,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sudoku_Prefix.pch;
 				INFOPLIST_FILE = "Sudoku-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Sudoku;
-				PROVISIONING_PROFILE = "DDA83A9E-1618-417C-936F-620639EF5B6D";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DDA83A9E-1618-417C-936F-620639EF5B6D";
+				PROVISIONING_PROFILE = "205A36CA-9815-436E-A711-48FA7C57964E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "205A36CA-9815-436E-A711-48FA7C57964E";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s armv6";
 			};
 			name = Adhoc;
 		};
@@ -3220,17 +3227,18 @@
 				ARCHS = (
 					armv6,
 					armv7,
+					armv7s,
 				);
 				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Mongiardi (HH6A5VJD68)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
-				PROVISIONING_PROFILE = "D4656365-40BF-473D-B8E5-F1D04E98CE70";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D4656365-40BF-473D-B8E5-F1D04E98CE70";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "9974996D-B04F-46F9-BDD0-7BD424CF8EF4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s armv6";
 			};
 			name = Debug;
 		};
@@ -3240,18 +3248,19 @@
 				ARCHS = (
 					armv6,
 					armv7,
+					armv7s,
 				);
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mongiardi Technical Solutions, Inc";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "A1CF99B0-3FD4-4B89-AB30-E0D02DF52EDB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A1CF99B0-3FD4-4B89-AB30-E0D02DF52EDB";
+				PROVISIONING_PROFILE = "205A36CA-9815-436E-A711-48FA7C57964E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = "armv7 armv7s armv6";
 			};
 			name = Release;
 		};
