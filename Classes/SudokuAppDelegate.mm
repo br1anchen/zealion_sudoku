@@ -12,7 +12,7 @@
 #import "GameOptionInfo.h"
 #import "SudokuEngine.h"
 #import "MKStoreManager.h"
-
+#import <sys/xattr.h>
 
 @implementation SudokuAppDelegate
 
@@ -49,6 +49,8 @@
 	AudioSessionInitialize (NULL, NULL, nil, nil);
     [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];
 
+    /*skip icloud backup*/
+    [self addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:[self savePath]]];
     return YES;
 }
 
@@ -91,6 +93,62 @@
 	[g_GameOptionInfo saveData];
 }
 
+#pragma mark -
+#pragma mark Skip iCloud function
+
+-(BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)fileURL {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[fileURL path]]) {
+        NSLog(@"File %@ doesn't exist!",[fileURL path]);
+        return NO;
+    }
+    NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+    if ([currSysVer isEqualToString:@"5.0.1"]) {
+        const char* filePath = [[fileURL path] fileSystemRepresentation];
+        const char* attrName = "com.apple.MobileBackup";
+        u_int8_t attrValue = 1;
+        int result = setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
+        NSLog(@"Excluded '%@' from backup",fileURL);
+        return result == 0;
+    }
+    else if (&NSURLIsExcludedFromBackupKey) {
+        NSError *error = nil;
+        BOOL result = [fileURL setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:&error];
+        if (result == NO) {
+            NSLog(@"Error excluding '%@' from backup. Error: %@",fileURL, error);
+            return NO;
+        }
+        else {
+            NSLog(@"Excluded '%@' from backup",fileURL);
+            return YES;
+        }
+    } else {
+        return YES;
+    }
+}
+
+- (NSString*) savePath
+{
+    NSString *os5 = @"5.0";
+    
+    NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    
+    if ([currSysVer compare:os5 options:NSNumericSearch] == NSOrderedAscending) //lower than 4
+    {
+        return path;
+    }
+    else if ([currSysVer compare:os5 options:NSNumericSearch] == NSOrderedDescending) //5.0.1 and above
+    {
+        return path;
+    }
+    else // IOS 5
+    {
+        path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"];
+        return path;
+    }
+    
+    return nil;
+}
 
 #pragma mark -
 #pragma mark Memory management
